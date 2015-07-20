@@ -62,7 +62,7 @@ Known Bugs:
  - Listen:   Next/Previous buttons don't work (The dbus call is correct but from that to the player something is not working fine.)
  - Songbird: It works but the screenlet lags a lot. Although it uses MPRIS just like Exaile or qmmp which run fine.
 
-For more details please read the changelog...
+For more details please read the [changelog](https://github.com/blchinezu/NowPlayingScreenlet/blob/master/ChangeLog)...
 
 Available at gnome-look.org:
  - http://gnome-look.org/content/show.php?content=136480
