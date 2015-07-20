@@ -1,0 +1,26 @@
+<!-- 
+     An Example "NowPlaying" Skin
+     the tags are evaluated in order.. so in this case:
+     the first image is drawn, on top of that the albumcover, etc 
+     You can have as many image tags as you want
+	  The images can be svg or png
+-->
+<skin name="TestSkin" width="207" height="207">
+  <image src="nowplaying-bg.svg" x="0" y="0" width="207" height="207"/> 
+  <albumcover x="14" y="0" width="193" height="193"/>
+  <image src="bg-2.png" x="0" y="0" width="207" height="207"/>
+  <titlename x="60" y="1" font="Sans 10" color="#FFFFFFFF" maxchars="16" scroll="true"/> <!--rgba -->
+  <artistname x="60" y="16" font="Sans 9" color="#FFFFFFFF" maxchars="22" scroll="true"/>
+  <albumname x="60" y="27" font="Sans 9" color="#FFFFFFFF" maxchars="22" scroll="true"/>
+<playercontrols spacing="0" x="30" y="185">
+<prev width="20" height="20"/>
+     <!-- the images corresponding to this are 
+          prev.png, prev-hover.png and prev-pressed.png -->
+     <play_pause width="20" height="20"/> 
+     <!-- play.png play-hover.png play-pressed.png, 
+          pause.png pause-hover.png pause-pressed.png -->
+     <next width="20" height="20"/> 
+     <!-- next.png next-hover.png next-pressed.png -->
+  </playercontrols>
+</skin>
+

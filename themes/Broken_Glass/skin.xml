@@ -1,0 +1,15 @@
+<!-- 
+     An Example "NowPlaying" Skin
+     the tags are evaluated in order.. so in this case:
+     the first image is drawn, on top of that the albumcover, etc 
+     You can have as many image tags as you want
+	  The images can be svg or png
+-->
+<skin name="TestSkin" width="853" height="400">
+  <image src="blank.png" x="0" y="0" width="853" height="400"/>
+  <image src="circuit.png" x="374" y="17" width="298" height="257"/> 
+  <albumcover x="378" y="22" width="291" height="246"/>
+  <image src="black-shade.png" x="374" y="17" width="298" height="257"/> 
+  <image src="glass.png" x="0" y="0" width="853" height="400"/>
+</skin>
+

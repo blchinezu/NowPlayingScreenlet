@@ -1,0 +1,22 @@
+Made by BruceLee
+
+
+
+Requires:
+=========
+
+ImageMagick:
+	sudo apt-get install imagemagick
+Screenlets:
+	sudo apt-get install screenlets
+NowPlaying screenlet (>= v.0.3.3.3 improved by BruceLee):
+	http://www.gnome-look.org/content/show.php?content=136480
+
+
+
+	
+Installation:
+=============
+
+Copy the folder "Border_Fade-200px" to "~/.screenlets/NowPlaying/themes/"
+

@@ -1,0 +1,81 @@
+<!-- 
+  An Example "NowPlaying" Skin
+  The tags are evaluated in order..
+  You can have as many image tags as you want
+  The images can be svg or png (except for the buttons which can be only png)
+  
+  When it comes to buttons it's best not to 
+  
+  Here's a short tag tutorial:
+  
+  General:
+   > x             (relative x position)
+   > y             (relative y position)
+   > width         (width of the object)
+   > height        (height of the object)
+   > display       (choose when you want it displayed)
+      > Values: on-playing, on-stopped
+   > transparency  (make objects transparent without editing them)
+      > values go from 0 (opaque) to 1 (invisible)
+      > has no effect on text objects
+  
+  albumcover:
+   > only the general stuff
+  
+  image:
+   > src           (image file name)
+      
+  text:
+   > font          (the font name, style and size)
+   > align         (align the text: left, center, right)
+   > scroll        (allow the text to scroll if it's too long)
+   > maxchars      (max characters to be displayed)
+   > color         (in hex rgba format - RedGreenBlueAlpha)
+      > color example: #FFFFFF99
+         > #FFFFFF is the actual color code and the last 99 is the alpha transparency value
+         
+  buttons:   got no options but the button tags must be contained by it
+   > 'prev' requires the following images:
+      > prev.png, prev-hover.png, prev-pressed.png
+   > 'play_pause' requires the following images:
+      > play.png, play-hover.png, play-pressed.png, pause.png, pause-hover.png, pause-pressed.png
+   > 'next' requires the following images:
+      > next.png, next-hover.png, next-pressed.png
+      
+  ratinggroup:
+   > basename       (the basename of the images to be used)
+      > BASENAME-empty.png, BASENAME-half.png, BASENAME-full.png
+   > by default: display = on-playing
+   
+  rating:
+   > same as ratinggroup but values can be overwritten by star* sub-tag values
+   > it requires the 5 star* sub-tags
+   > by default: display = on-playing
+  
+-->
+
+<skin name="TestSkin" width="284" height="363">
+  <image src="bkg.png" x="0" y="0" width="284" height="363"/> 
+  <albumcover x="20" y="21" width="244" height="246" transparency="0.1"/>
+  <image src="dark-hover.png" x="20" y="21" width="244" height="246"/>
+  <playername x="20" y="270" width="244" font="Sans Bold 8" color="#FFFFFF33" align="center"/>
+  <titlename x="20" y="288" width="244" font="Sans Bold 10" color="#FFFFFFEE" maxchars="31" align="center" scroll="true"/>
+  <artistname x="20" y="310" width="244" font="Sans Italic 9" color="#FFFFFFEE" maxchars="33" align="center" scroll="true"/>
+  <albumname x="20" y="330" width="244" font="Sans Bold 9" color="#FFFFFFEE" maxchars="30" align="center" scroll="true"/>
+  <ratinggroup x='102' y='250' width='80' height='15' basename='star'/>
+<!-- This does the same thing as <ratinggroup> but you can set individual values for each star. It's much more flexible.
+  <rating x='102' y='250' width='16' height='15' basename='star'>
+    <star1/>
+    <star2 x='118'/>
+    <star3 x='134'/>
+    <star4 x='150'/>
+    <star5 x='166'/>
+  </rating>
+-->
+  <buttons>
+    <prev x="20" y="21" width="81" height="246" transparency="0.05"/>
+    <play_pause x="101" y="21" width="82" height="228" transparency="0.05"/>
+    <next x="183" y="21" width="80" height="246" transparency="0.05"/>
+  </buttons>
+</skin>
+

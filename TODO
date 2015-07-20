@@ -1,0 +1,40 @@
+BruceLee: This todo list is not made by me and most probably I won't follow it. For the newer updates please read the README and ChangeLog files.
+
+
+
+todo for next version:
+- amarok_1 zusammenführen
+- autostart/stop when screenlet starts
+- scroller
+
+
+done in v3.3:
+done: 2 x MPD player
+done: Umlaute in Fetcher
+done: 2 x mpris player
+done: jpg/png-problem bei fetcher
+done: fetcher module umbenennen
+done: fetcher in den Hintergrund
+done: show icon while fetching (customizable by theme)
+
+
+Tested players:
+- Amarok v1.x
+- Amarok v2.x
+- Banshee
+- Exaile v0.2.x
+- Exaile v0.3.x (mpris)
+- Listen
+- MPD
+- QuodLibet
+- Rhythmbox
+- Songbird (mpris)
+
+
+Mpris, not tested:
+- XMMS2
+- Beep Media Player (BMPx)
+- Audacious
+- VLC
+- QMMP
+- Dragon Player

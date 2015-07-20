@@ -1,0 +1,253 @@
+
+Changelog containing all the modifications done since the Alexibaba mod v.0.3.3.0:
+
+v.0.3.4.3 (2011-02-27)
+
+ + Added gettext support for launchpad translation (thanks to boamaod)
+ + Fixed sleepfade issues with low duration values
+ 
+--------------------------------------------------------------------------------
+
+v.0.3.4.2 (2011-02-21)
+
+ + Improved APIs:
+    > General: Added set_vol(), stop() and quit() functions (only to those that could provide the functionality)
+    > Banshee: First searches for cover in the song directory and then tries other places
+    > Banshee: Fixed play button bug reported by EcstasyGold
+    > Listen:  Made a workaround to get the volume manipulation work (not very elegant but works)
+
+ + Added sleep fade in the right click menu:
+    > During a determined period of time the volume slowly fades out and at the end of the process the player and/or the computer can be shutted down
+    > When you first click it, it starts. When clicked again it stops the process.
+    > It has a new group in the options called 'Sleep'
+    > Slow volume fading is not supported by: Amarok 2, Banshee, Jajuk, MPD, QuodLibet
+    > Player quit option is not supported by: Amarok 2, MPD
+    > The shutdown feature requires zenity to get the user password.
+       >> The password is not stored. When the sleep fade process ends or is stopped the password is removed from memory. Safer this way.
+ 
+--------------------------------------------------------------------------------
+
+v.0.3.4.1 (2011-02-14)
+
+ + Fixed right click menu options 'Open cover with viewer' and 'Open cover location' for skins using cover_manip.sh
+
+ + Added API support for: Decibel-Audio-Player, Jajuk, Juk, Muine, qmmp
+    >> For Jajuk to work you shouldn't modify the 'Frame title' pattern: ~%title (%artist)~
+ 
+ + Players using Mpris or Xmms2 got their own API's extended from MprisAPI and XMMS2API
+    
+ + Cover copy support for Banshee
+ 
+ + For player APIs supporting cover search in the song directory: (You may thank Passaralho for pointing this out)
+    > You can set a preferred cover name in options under the 'Cover' tab (will first search for this one - case insensitive)
+    > Default preferred cover names: cover, folder, front (in this order - case insensitive)
+    > Accepted extensions: jpg, jpeg, png, bmp
+ 
+ + Added Rating control:
+    > Updated the default and default-old skins with this feature
+    > Player APIs providing support: Amarok 1, Banshee (Only show rating, can't manipulate it), Exaile
+       >> The Exaile API uses the "qdbus" binary to work with ratings. For some reason the python dbus module doesn't work with it.
+    > Made 2 methods for theme creators:
+       >> First:  The "ratinggroup" tag which adds the 5 stars with only 1 line
+       >> Second: The "rating" tag which requires star* sub-tags (this one can use independent x, y, width, height, transparency and basename)
+       >> To see examples go to the default skin xml file
+ 
+ + Added Volume control:
+ 	> Vol up/down by scrolling up/down over the screenlet
+ 	> Mute/Unmute with middle click on the screenlet
+    > Currently supported by the following API's:
+       >> Abraca, Amarok 1, Amarok 1 no pydcop, Audacious, Decibel-Audio-Player, Esperanza, Exaile, gXMMS2, Jajuk, Listen (only mute/unmute), LXMusic, Muine, qmmp, Rhythmbox, Songbird, XMMS2
+       >> Amarok 2 got no volume control because I can't install it along with Amarok 1. I'm quite sure it has the ability to do this.
+ 
+--------------------------------------------------------------------------------
+
+v.0.3.4.0 (2010-02-10)
+
+ + Right click on the screenlet and you'll see 2 new options: 'Open cover with viewer' and 'Open cover location' (the use of them is quite obvious)
+    > The image viewer and file browser can be changed in the options under the 'General' tab which replaced the 'Scrolling' tab.
+       >> By default the binaries are the defaults for ubuntu: eog and nautilus
+       
+ + Debugging can be turned on from the 'General' tab of the options
+    > You'll get more terminal output if you activate this
+ 
+ + Skinning: transparency option for images
+    > Supported types: image, albumcover, buttons
+       >> Text types already have the alpha value so there's no need to add this option to them
+    > Here's a usage example: <albumcover x="5" y="5" width="190" height="190" transparency="0.3"/>
+       >> The transparency value goes from 0 (fully visible) to 1 (invisible)
+       
+ + Skinning: rewritten player controls
+    > The 'playercontrols' tag is rewritten into the 'buttons' tag
+    > The buttons are now on the same surface as the rest of the elements
+    > It can now use transparent png images and the transparency option newly included
+    > Each button has it's own coordinates and dimensions so you can place them wherever you want
+    > If you want you can still use the 'playercontrols' tag as I made it backwards compatible (so the old themes still work :) )
+       > however if you use 'playercontrols' you'll have the old limitations
+       
+ + Fade effect: (This should be implemented directly in the screenlets engine so that all the screenlets can use it; hopefully the developers will do)
+    > This fade feature was not tested very good and so it might still contain bugs
+ 	> The screenlet checks if compiz is running. If it's not running, the fade effect is disabled.
+ 	   >> You can manually enable/disable it from options.
+    > Fade in when screenlet is started
+    > Cover changing: Fade out previous cover, fade in new cover
+    > Theme changing: Fade out previous theme, fade in new theme
+    > Fade in when player found / Fade out if no player found
+    > Fade in if playing / Fade out if not playing
+    > Fade in/out on mouse hover
+    > Right-click menu option: 'Show/Hide'
+       >> Hide the screenlet (it's still there but with 100% transparency, right click again and click on the 'Show/Hide' option to make it visible)
+    > Almost all the presented fade actions can be enabled/disabled from the 'Fade' tab from options
+       
+ + New Default Skin: (The old one is still there also)
+    > This theme is ment to be released and updated with the screenlet and represents an example of all the skinning possibilities available
+    > It can be used as a tutorial as it has a list with everything you can use
+    > Looks good with the Darkness (rgba true) gtk2 theme
+ 
+ + Changed cover fetching order: LastFM, Amazon, Discogs
+ 
+ + Fixed bug reported by danino73:
+    > After the cover was fetched it was not painted on the screen
+ 
+--------------------------------------------------------------------------------
+
+v.0.3.3.9 (2011-01-20)
+
+ + MPD: python-mpd is included so you don't have to install it.
+ + MPRIS: You can add a third mpris player in options now.
+ + All API: Added get_url() and get_url_dir() to be able to fetch the current song path
+ 
+ + New Feature: Cover Copy (requires imagemagick to get image dimensions and to change the image format)
+    > Copy the cover to the songs folder.
+    > Added in the 'Cover' tab in options.
+    > It replaces the existing cover only if the new one is bigger (resolution not size in bytes) (can be activated/deactivated)
+    > It can also remove any other image present in the directory except for the cover (can be activated/deactivated)
+    > It doesn't work with all the players because some of them don't provide the file location.
+       >> Supported: Abraca, Amarok 1, Audacious, Esperanza, gXMMS2, Listen, LXMusic, MPD, MPRIS based, Rhythmbox, XMMS2
+
+--------------------------------------------------------------------------------
+
+v.0.3.3.8 (2011-01-17)
+
+ + Performance optimizations
+    > The skinning feature introduced in v.0.3.3.3 was quite a load for the CPU because the cover_manip.sh script was called each time the screenlet was getting data from the player.
+    > The cover was also fetched each second. Now it gets the cover only when changing the track.
+    > Wallpaper feature had the same situation as the cover.
+    > The screenlet was basically doing an unnecessary full update each second. Now it's only comparing the last known necessary values with the current ones before deciding on updating or not.
+ 
+ + History logging improved.
+ 
+ + Fixed the launch/kill player feature for all the tested players.
+
+--------------------------------------------------------------------------------
+
+v.0.3.3.7 (2011-01-13)
+
+ + Amarok1_no_pydcop: API fixes..
+ 
+ + QuodLibet:         Fixed cover showing.
+    > Requires "Picture Saver" plugin to be enabled.
+ 
+ + Audacious:         Added support (API)
+ + Songbird:          Added support
+ 
+ + Xmms2:             Added support (API)
+    > It works with or without a GUI. All it needs is the xmms2d (daemon) and the nyxmms2 binary to control it.
+    > However I've tested the following GUIs and all worked fine: gxmms2 abraca lxmusic esperanza
+ 
+ + Mpris:             Cover path corrected for paths containing: ( ) [ ] ' ! @ &
+ 
+ + Wallpaper:         Corrected bug..
+    > The dot in the artist/album name was acting like a wild card character when searching image
+
+--------------------------------------------------------------------------------
+
+v.0.3.3.6 (2011-01-11)
+
+ + Banshee: Fixed API problems
+    > Fixed the null artist/title/album returns which blocked the screenlet
+    > Added the current Banshee cover path: [ ~/.cache/media-art/ ] but the old one works too: [ ~/.cache/album-art/ ]
+    
+ + Listen: Improved API
+    > Added the current Listen cover path: [ ~/.cache/listen/cover/ ] the old one works too: [ ~/.listen/cover/ ]
+    > Added the current cached cover naming method: [ album.jpg ] but the old one works too: [ artist+album.jpg ]
+    
+ + MPRIS: Improved API
+    > Fixed the null artist/title/album returns which blocked the screenlet
+    > Improved cover get method: Implemented the same method applied for the Amarok 1 API
+
+--------------------------------------------------------------------------------
+
+v.0.3.3.5 (2011-01-10)
+
+ + Amarok 1: Cover quality increase (moved the implementation into the APIs)
+ + Amarok 1: Removed the no cover image which looks bad on many skins
+ + Cleaned the code a bit and increased a small amount of performance.
+
+--------------------------------------------------------------------------------
+
+v.0.3.3.4 (2011-01-09)
+
+ + Wallpaper changer fixes:
+    > Artists name like: AC/DC or Damian "Jr. Gong" Marley weren't working so in the image name the following characters must be written as _ (underline):  \ / ' " [ ]
+    > Other players than amarok weren't working because of a small error that occurred in a check performed. (thanks to BOAMAOD for pointing out the Rhythmbox problem)
+ 
+ + Rhythmbox API improvement:
+    > Improved the get_cover_path function:
+      >> Mixed the original API made by vrunner with the custom one made by Alexibaba
+      >> Added the new rhythmbox covers path [ ~/.cache/rhythmbox/covers ] but the old one [ ~/.gnome2/rhythmbox/covers ] is still working too.
+
+ + Wallpaper changer improvement:
+    > While playing, it checks for album/artist wallpaper and if there's none it can log the artist name. (This way it makes a sorted list of artist wallpapers you need to get.)
+    
+ + New feature: History logging of songs played
+    > There's a new tab in options called History
+    > It logs the current time and the current playing track.
+      >> Note: If you loop a single track, the track is logged only the first time it's played.
+
+--------------------------------------------------------------------------------
+
+v.0.3.3.3 (2010-12-25)
+
+ + New skin: Broken_Glass (needs NowPlayer v.0.3.3.3 or later)
+ 
+ + New feature: Cover can be processed through a bash script right before updating the screen. (all supported players)
+    > The Steps:
+      >> 1. When changing the cover the screenlet searches for a [ cover_manip.sh ] script in the theme folder
+      >> 2. If it exists then the cover is copied in the theme folder with the name: cover.png
+      >> 3. Now the script is executed (the returned image must replace cover.png)
+      >> 4. The path to the new cover.png is passed to the skin engine and it get's shown.
+    > Broken_Glass is the best example (it's actually the reason I added the feature... I really wanted such theme)
+    > I hope this feature will bring up many new and great themes as skinning is much more flexible now.
+    > Dependencies: sudo apt-get install imagemagick
+      >> The dependency isn't required by the screenlet but by the Broken_Glass theme to manipulate the cover image.
+
+--------------------------------------------------------------------------------
+
+v.0.3.3.2 (2010-12-24)
+
+ + New Feature: Wallpaper changer (all supported players) (gnome only - uses gconftool-2)
+    Details:
+    > Sets wallpaper according to the current album or the current artist (in this order - in case both are present)
+    > You can activate it from the new [ Wallpaper ] tab created in options
+    > You should set the path to the wallpaper applied when not having a cover or not playing (by default it sets your current one)
+    > You have to set the album and artist folder paths in the options
+      >> The paths must be absolute. Don't use ~/Pictures instead of /home/YourUsername/Pictures
+      >> The folders should contain images with the album/artist name as it is written in the player tag (case insensitive)
+      >> The image extension doesn't matter as long as it is there.
+         >>> For example: If the artist is Eminem the image  Eminem.jpg  will work fine while  Eminem  won't
+
+--------------------------------------------------------------------------------
+
+v.0.3.3.1 (2010-12-20)
+
+ + Fixed the & character which appeared as &amp; for the album text (all supported players)
+ 
+ + The screenlet is now locally searching for a better image than the thumbnail provided by dcop which is quite small (amarok only)
+    Search places (in this exact order):
+    > ~/.kde/share/apps/amarok/albumcovers/large
+    > ~/.kde/share/apps/amarok/albumcovers/tagcover
+    > song path: *.png *.jpg *.jpeg (selects the first image found)
+    
+ + The image shown when not having a cover can be changed by replacing [ UI/no-cover.png ] with a custom one. (amarok only)
+    > To restore the default one just remove [ UI/no-cover.png ] from the screenlet folder
+
