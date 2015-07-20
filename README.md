@@ -62,11 +62,6 @@ Known Bugs:
  - Listen:   Next/Previous buttons don't work (The dbus call is correct but from that to the player something is not working fine.)
  - Songbird: It works but the screenlet lags a lot. Although it uses MPRIS just like Exaile or qmmp which run fine.
 
-If there are any problems please report them so that we can make this screenlet even better.  
-The screenlet contains only a few themes because of the uploading limit.
-
-Something I'd like to see in this screenlet is the ability to run multiple instances. Unfortunately I still didn't figure out how to do that.
-
 For more details please read the changelog...
 
 Available at gnome-look.org:
