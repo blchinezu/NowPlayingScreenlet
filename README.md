@@ -68,6 +68,7 @@ Available at gnome-look.org:
  - http://gnome-look.org/content/show.php?content=136480
 
 Screenshots:
- - [./screenshots/136480-1.png](https://raw.githubusercontent.com/blchinezu/NowPlayingScreenlet/master/screenshots/136480-1.png)
- - [./screenshots/136480-2.jpg](https://raw.githubusercontent.com/blchinezu/NowPlayingScreenlet/master/screenshots/136480-2.jpg)
- - [./screenshots/136480-3.png](https://raw.githubusercontent.com/blchinezu/NowPlayingScreenlet/master/screenshots/136480-3.png)
+
+![./screenshots/136480-1.png](https://raw.githubusercontent.com/blchinezu/NowPlayingScreenlet/master/screenshots/136480-1.png)
+![./screenshots/136480-3.png](https://raw.githubusercontent.com/blchinezu/NowPlayingScreenlet/master/screenshots/136480-3.png)
+![./screenshots/136480-2.jpg](https://raw.githubusercontent.com/blchinezu/NowPlayingScreenlet/master/screenshots/136480-2.jpg)
