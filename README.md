@@ -72,3 +72,9 @@ Screenshots:
 ![./screenshots/136480-1.png](https://raw.githubusercontent.com/blchinezu/NowPlayingScreenlet/master/screenshots/136480-1.png)
 ![./screenshots/136480-3.png](https://raw.githubusercontent.com/blchinezu/NowPlayingScreenlet/master/screenshots/136480-3.png)
 ![./screenshots/136480-2.jpg](https://raw.githubusercontent.com/blchinezu/NowPlayingScreenlet/master/screenshots/136480-2.jpg)
+
+You can donate through PayPal at [brucelee.duckdns.org/donation/NowPlayingScreenlet](http://brucelee.duckdns.org/donation/NowPlayingScreenlet)
+
+    Since I can't directly add the PayPal donation button here, I've created a simple page
+    which has the Donate button.
+    
