@@ -95,9 +95,9 @@ For more details please read the [changelog](https://github.com/blchinezu/NowPla
 
 --------------------------------------------------------------------------------
 
-### Available at gnome-look.org
+### History
 
- - http://gnome-look.org/content/show.php?content=136480
+NowPlaying was initially hosted @ [gnome-look.org](https://www.gnome-look.org/p/1006310/)
 
 --------------------------------------------------------------------------------
 
