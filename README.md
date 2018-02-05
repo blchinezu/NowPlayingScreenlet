@@ -62,8 +62,8 @@ Terminal commands for installation from PPA:
  - last tested with v0.3.4.2 - Rhythmbox
  - last tested with v0.3.4.2 - Songbird              (needs MPRIS Addon)
  - last tested with v0.3.4.2 - XMMS2                 (with/without GUI.. doesn't matter)
-                             - Maybe other players with MPRIS support
-                             - Definitely other XMMS2 clients
+   - Maybe other players with MPRIS support
+   - Definitely other XMMS2 clients
  
 --------------------------------------------------------------------------------
 
