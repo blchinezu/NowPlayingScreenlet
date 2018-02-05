@@ -19,7 +19,8 @@ Terminal commands for installation from PPA:
     
 --------------------------------------------------------------------------------
 
-### New Features Summary:
+### New Features Summary
+
  + General:   Easy translations through launchpad
  + General:   Wallpaper changer (Sets wallpaper according to the current artist or album) (requires gconftool-2)
  + General:   Cover Copy (Copies the current cover to the song folder) (requires imagemagick)
@@ -36,12 +37,14 @@ Terminal commands for installation from PPA:
 
 --------------------------------------------------------------------------------
 
-### Note for the Screenlets engine developers:
+### Note for the Screenlets engine developers
+
  - The fade effect should be implemented directly into the screenlets engine so that all the screenlets can use it. I do belive that it would look way better.
 
 --------------------------------------------------------------------------------
 
-### Supported players:
+### Supported players
+
  - last tested with v0.3.4.2 - Abraca                (XMMS2 GUI)
  - last tested with v0.3.4.2 - Amarok 1
  - last tested with v0.3.3.9 - Amarok 2
@@ -64,10 +67,10 @@ Terminal commands for installation from PPA:
  - last tested with v0.3.4.2 - XMMS2                 (with/without GUI.. doesn't matter)
    - Maybe other players with MPRIS support
    - Definitely other XMMS2 clients
- 
+
 --------------------------------------------------------------------------------
 
-### Included skins:
+### Included skins
  - Border_Fade-200px
  - Border_Fade-400px
  - Broken_Glass
@@ -83,7 +86,8 @@ Terminal commands for installation from PPA:
 
 --------------------------------------------------------------------------------
 
-### Known Bugs:
+### Known Bugs
+
  - Listen:   Next/Previous buttons don't work (The dbus call is correct but from that to the player something is not working fine.)
  - Songbird: It works but the screenlet lags a lot. Although it uses MPRIS just like Exaile or qmmp which run fine.
 
@@ -91,7 +95,8 @@ For more details please read the [changelog](https://github.com/blchinezu/NowPla
 
 --------------------------------------------------------------------------------
 
-### Available at gnome-look.org:
+### Available at gnome-look.org
+
  - http://gnome-look.org/content/show.php?content=136480
 
 --------------------------------------------------------------------------------
