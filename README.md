@@ -1,11 +1,25 @@
 # NowPlayingScreenlet
-### An improved version of the NowPlaying Screenlet
+### An improved version of the NowPlaying Screenlet previously maintained by Alexibaba
 
 ![./screenshots/136480-1.png](https://raw.githubusercontent.com/blchinezu/NowPlayingScreenlet/master/screenshots/136480-1.png)
 ![./screenshots/136480-3.png](https://raw.githubusercontent.com/blchinezu/NowPlayingScreenlet/master/screenshots/136480-3.png)
 ![./screenshots/136480-2.jpg](https://raw.githubusercontent.com/blchinezu/NowPlayingScreenlet/master/screenshots/136480-2.jpg)
 
-New Features Summary:
+--------------------------------------------------------------------------------
+
+### Download
+
+From this page or from the PPA for the debian based systems: https://launchpad.net/~screenlets-dev/+archive/ppa
+
+Terminal commands for installation from PPA:
+
+    sudo add-apt-repository ppa:screenlets-dev/ppa
+    sudo apt-get update
+    sudo apt-get install nowplaying-screenlet
+    
+--------------------------------------------------------------------------------
+
+### New Features Summary:
  + General:   Easy translations through launchpad
  + General:   Wallpaper changer (Sets wallpaper according to the current artist or album) (requires gconftool-2)
  + General:   Cover Copy (Copies the current cover to the song folder) (requires imagemagick)
@@ -20,10 +34,14 @@ New Features Summary:
  + API:       Rating control
  + API:       Updated/Improved most of them and added some more
 
-Note for the Screenlets engine developers:
+--------------------------------------------------------------------------------
+
+### Note for the Screenlets engine developers:
  - The fade effect should be implemented directly into the screenlets engine so that all the screenlets can use it. I do belive that it would look way better.
 
-Supported players:
+--------------------------------------------------------------------------------
+
+### Supported players:
  - last tested with v0.3.4.2 - Abraca                (XMMS2 GUI)
  - last tested with v0.3.4.2 - Amarok 1
  - last tested with v0.3.3.9 - Amarok 2
@@ -47,7 +65,9 @@ Supported players:
                              - Maybe other players with MPRIS support
                              - Definitely other XMMS2 clients
  
-Included skins:
+--------------------------------------------------------------------------------
+
+### Included skins:
  - Border_Fade-200px
  - Border_Fade-400px
  - Broken_Glass
@@ -61,15 +81,22 @@ Included skins:
  - lucid-dark
  - lucid-light
 
- 
-Known Bugs:
+--------------------------------------------------------------------------------
+
+### Known Bugs:
  - Listen:   Next/Previous buttons don't work (The dbus call is correct but from that to the player something is not working fine.)
  - Songbird: It works but the screenlet lags a lot. Although it uses MPRIS just like Exaile or qmmp which run fine.
 
 For more details please read the [changelog](https://github.com/blchinezu/NowPlayingScreenlet/blob/master/ChangeLog)...
 
-Available at gnome-look.org:
+--------------------------------------------------------------------------------
+
+### Available at gnome-look.org:
  - http://gnome-look.org/content/show.php?content=136480
+
+--------------------------------------------------------------------------------
+
+### Donate
 
 You can donate through PayPal at [brucelee.duckdns.org/donation/NowPlayingScreenlet](http://brucelee.duckdns.org/donation/NowPlayingScreenlet)
 
