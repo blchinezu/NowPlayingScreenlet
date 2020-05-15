@@ -98,13 +98,3 @@ For more details please read the [changelog](https://github.com/blchinezu/NowPla
 ### History
 
 NowPlaying was initially hosted @ [gnome-look.org](https://www.gnome-look.org/p/1006310/)
-
---------------------------------------------------------------------------------
-
-### Donate
-
-You can donate through PayPal at [brucelee.duckdns.org/donation/NowPlayingScreenlet](http://brucelee.duckdns.org/donation/NowPlayingScreenlet)
-
-    Since I can't directly add the PayPal donation button here, I've created a simple page
-    which has the Donate button.
-    
